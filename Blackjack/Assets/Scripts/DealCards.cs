@@ -8,6 +8,7 @@ public class DealCards : MonoBehaviour
     public GameObject cardPrefab;
     public GameObject PlayerArea;
     public GameObject DealerArea;
+    public GameObject CardStack;
     public static string[] suits = new string[] { "C", "D", "H", "S" };
     public static string[] values = new string[] { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
     public List<string> deck;
@@ -47,13 +48,26 @@ public class DealCards : MonoBehaviour
 
     void BlackjackDeal()
     {
+        //For adding in additional decks, make a variable deck_num somewhere and add a for loop here, maybe?
+        // for(var i = 0; i < deck_num; i++)
         foreach (string card in deck)
         {
-        //for (var i = 0; i < ; i++)
-            GameObject newCard = Instantiate(cardPrefab, transform.position, Quaternion.identity);
-            newCard.transform.SetParent(PlayerArea.transform, false);
-            //newCard.name = card;
+            GameObject stackedCards = Instantiate(cardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            stackedCards.transform.SetParent(CardStack.transform, false);
+            stackedCards.name = card;
         }
+
+        /*for(var i = 0; i < 2; i++)
+        {
+            GameObject playerCards = Instantiate(cardPrefab, transform.position, Quaternion.identity);
+            playerCards.transform.SetParent(PlayerArea.transform, false);
+
+            GameObject dealerCards = Instantiate(cardPrefab, transform.position, Quaternion.identity);
+            dealerCards.transform.SetParent(DealerArea.transform, false);
+
+            GameObject stackedCards = Instantiate(cardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            stackedCards.transform.SetParent(CardStack.transform, false);
+        }*/
     }
 
     public void OnClick()
