@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DealCards : MonoBehaviour
 {
-    //Use resources load to assign sprite to certain cards?
+    //Use Resources.Load to assign sprite to certain cards? (Note: Need to make a Resources folder and place sprites in
+    // it if I want to do this. This is also an option: this.GetComponent<SpriteRenderer>().sprite = someSprite
     //Two seperate prefabs -- a cardBack with just the one sprite, and a cardFront with the various sprites.
     //Have cardBack hide cardFront when the cardBack needs to be shown, and get rid of it or add it to "flip."
     //Create a seperate script called CreateDeck for creating the deck, and then implement it in DealCards?
