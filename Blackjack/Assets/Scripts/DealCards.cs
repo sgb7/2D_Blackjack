@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DealCards : MonoBehaviour
 {
+    //Use resources load to assign sprite to certain cards?
+    //Two seperate prefabs -- a cardBack with just the one sprite, and a cardFront with the various sprites.
+    //Have cardBack hide cardFront when the cardBack needs to be shown, and get rid of it or add it to "flip."
+    //Create a seperate script called CreateDeck for creating the deck, and then implement it in DealCards?
+
     public Sprite[] cardFaces;
     public GameObject cardPrefab;
     public GameObject PlayerArea;
@@ -55,6 +60,7 @@ public class DealCards : MonoBehaviour
             GameObject stackedCards = Instantiate(cardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             stackedCards.transform.SetParent(CardStack.transform, false);
             stackedCards.name = card;
+            stackedCards.GetComponent<Selectable>().faceUp = true;
         }
 
         /*for(var i = 0; i < 2; i++)
