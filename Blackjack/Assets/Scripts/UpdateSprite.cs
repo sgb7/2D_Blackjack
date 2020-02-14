@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class UpdateSprite : MonoBehaviour
 {
+    public Sprite cardFace;
+    public Sprite cardBack;
+
     // Start is called before the first frame update
     void Start()
     {
