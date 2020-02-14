@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpdateSprite : MonoBehaviour
+public class Selectable : MonoBehaviour
 {
-    public Sprite cardFace;
-    public Sprite cardBack;
-    private SpriteRenderer spriteRenderer;
-    private Selectable selectable;
-    private DealCards dealCards;
+    public bool faceUp = false;
+
 
     // Start is called before the first frame update
     void Start()
