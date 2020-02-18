@@ -171,6 +171,65 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1932202578463798944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1545883800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545883801}
+  - component: {fileID: 1545883803}
+  - component: {fileID: 1545883802}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1545883801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545883800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.213154, y: 11.247419, z: -17.602482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545883802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545883800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a75d0ca7fb5dca409a487e556336c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {x: -4, y: 2, z: 0}
+  cardOffset: 0.2
+  cardPrefab: {fileID: 892912962}
+--- !u!114 &1545883803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545883800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c4612de1674144bbe54a60e9335420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1558364156
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,10 +239,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1558364159}
-  - component: {fileID: 1558364158}
   - component: {fileID: 1558364157}
+  - component: {fileID: 1558364158}
   m_Layer: 0
-  m_Name: Card Deck Test
+  m_Name: Dealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

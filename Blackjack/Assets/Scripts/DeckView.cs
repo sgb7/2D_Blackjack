@@ -33,6 +33,9 @@ public class DeckView : MonoBehaviour
             cardModel.cardIndex = i;
             cardModel.ToggleFace(true);
 
+            SpriteRenderer spriteRenderer = cardCopy.GetComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = cardCount;
+
             cardCount++;
         }
     }

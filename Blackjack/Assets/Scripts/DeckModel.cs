@@ -14,16 +14,21 @@ public class DeckModel : MonoBehaviour
         }
     }
 
-    public void Shuffle()
+    public int Pop()
     {
-        if(cards == null)
-        {
-            cards = new List<int>();
-        }
-        else
-        {
-            cards.Clear();
-        }
+        int temp = cards[0];
+        cards.RemoveAt(0);
+        return temp;
+    }
+
+    public void Push(int card)
+    {
+        cards.Add(card);
+    }
+
+    public void CreateDeck()
+    {
+        cards.Clear();
 
         for(int i = 0; i < 52; i++)
         {
@@ -43,6 +48,7 @@ public class DeckModel : MonoBehaviour
 
     void Awake()
     {
-        Shuffle();
+        cards = new List<int>();
+        CreateDeck();
     }
 }
