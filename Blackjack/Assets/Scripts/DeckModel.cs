@@ -26,6 +26,19 @@ public class DeckModel : MonoBehaviour
         cards.Add(card);
     }
 
+    public void Shuffle()
+    {
+        int n = cards.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            int temp = cards[k];
+            cards[k] = cards[n];
+            cards[n] = temp;
+        }
+    }
+
     public void CreateDeck()
     {
         cards.Clear();
@@ -35,15 +48,7 @@ public class DeckModel : MonoBehaviour
             cards.Add(i);
         }
 
-        int n = cards.Count;
-        while(n > 1)
-        {
-            n--;
-            int k = Random.Range(0, n + 1);
-            int temp = cards[k];
-            cards[k] = cards[n];
-            cards[n] = temp;
-        }
+        Shuffle();
     }
 
     void Awake()
