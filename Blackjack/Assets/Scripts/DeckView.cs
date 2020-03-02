@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(DeckModel))]
+//[RequireComponent(typeof(DeckModel))]
 public class DeckView : MonoBehaviour
 {
     DeckModel deck;
@@ -17,7 +17,7 @@ public class DeckView : MonoBehaviour
         ShowCards();
     }
 
-    void ShowCards()
+    public void ShowCards()
     {
         int cardCount = 0;
 
